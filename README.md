@@ -3,10 +3,10 @@
 
 A set of C programs that calculate the best fit for boxes on a pallet, and visualize the result.
 
-Reference Implementation of the EB-AFIT Pallet Loading Algorithm
+Reference Implementation of the EB-AFIT Pallet Loading Algorithm  //EB-AFIT Pallet 加载算法
 ----------------------------------------------------------------
 
-The algorithm described in the thesis document (see *History and Future*, below) has been retroactively named the EB-AFIT Pallet Loading Algorithm, in honor of its author and the institution where he performed his research.  Since the code in this repository is directly transcribed from the appendices accompanying the thesis, these code files should be considered the [reference implementation](https://en.wikipedia.org/wiki/Reference_implementation) of the algorithm.
+The algorithm described in the thesis document (see *History and Future*, below) has been retroactively named the EB-AFIT Pallet Loading Algorithm, in honor of its author and the institution where he performed his research.  Since the code in this repository is directly transcribed from the appendices accompanying the thesis, these code files should be considered the [reference implementation](https://en.wikipedia.org/wiki/Reference_implementation) of the algorithm.  //后来被追溯命名为 EB-AFIT Pallet 加载算法，致敬🫡它的作者以及 作者所执行研究 的组织，美国🇺🇸空军技术学院 
 
 History and Future
 ------------------

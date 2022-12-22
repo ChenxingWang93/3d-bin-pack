@@ -1,4 +1,4 @@
-3d-bin-pack
+3d-bin-pack //3d-箱-打包
 ===========
 
 A set of C programs that calculate the best fit for boxes on a pallet, and visualize the result.

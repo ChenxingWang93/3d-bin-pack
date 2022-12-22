@@ -1,19 +1,19 @@
 3d-bin-pack //3d-箱-打包
 ===========
 
-A set of C programs that calculate the best fit for boxes on a pallet, and visualize the result.
+A set of C programs that calculate the best fit for boxes on a pallet, and visualize the result.  //计算+可视化
 
 Reference Implementation of the EB-AFIT Pallet Loading Algorithm  //EB-AFIT Pallet 加载算法
 ----------------------------------------------------------------
 
 The algorithm described in the thesis document (see *History and Future*, below) has been retroactively named the EB-AFIT Pallet Loading Algorithm, in honor of its author and the institution where he performed his research.  Since the code in this repository is directly transcribed from the appendices accompanying the thesis, these code files should be considered the [reference implementation](https://en.wikipedia.org/wiki/Reference_implementation) of the algorithm.  //后来被追溯命名为 EB-AFIT Pallet 加载算法，致敬🫡它的作者以及 作者所执行研究 的组织，美国🇺🇸空军技术学院 
 
-History and Future
+History and Future  //历史与未来
 ------------------
 
-These files represent an obscure little piece of history. While researching bin packing algorithms, I came across this Air Force Institute of Technology master's thesis (included in this repository in doc/) by Erhan Baltacıoğlu, B.S, who was then a First Lieutenant of the Turkish Air Force. This thesis described and documented a heuristic algorithm for finding the best way to pack boxes into a pallet of given dimensions.
+These files represent an obscure little piece of history. While researching bin packing algorithms, I came across this Air Force Institute of Technology master's thesis (included in this repository in doc/) by Erhan Baltacıoğlu, B.S, who was then a First Lieutenant of the Turkish Air Force. This thesis described and documented a heuristic algorithm for finding the best way to pack boxes into a pallet of given dimensions.  //这些文件代表复杂历史的一瞥。当 研究 打包装箱算法 的时候，遇到这个 美国空军技术学院 的硕士论文 （包括在这个代码库中）作者 Erhan Baltacıoğlu 是土耳其空军中尉。这篇论文描述 并 记录了一个在给定尺寸中通过启发式 算法 找到最优包装盒的方法
 
-The document is typical of a thesis in that it describes the problem, looks at extant solutions to the problem and analyzes the pros and cons to each extant solution, then describes a different (presumably better) approach to solving the problem, and then provides implementation details.  The implementation details are described prosaically, but then the document has several appendices which go into implementation detail with pseudocode and C programming code, as well as test and result sets.
+The document is typical of a thesis in that it describes the problem, looks at extant solutions to the problem and analyzes the pros and cons to each extant solution, then describes a different (presumably better) approach to solving the problem, and then provides implementation details.  The implementation details are described prosaically, but then the document has several appendices which go into implementation detail with pseudocode and C programming code, as well as test and result sets. //文件📃是一个典型的论文范式：描述了一个问题，寻找现行解决方案 并对 现行解决方案做 优势 与 劣势 分析，并且描述
 
 The PDF was scanned in as an image and ran through an OCR routine at some point.  I was interested in seeing if I could make the C code run, so copied and pasted the C code into an IDE and set to work fixing the OCR errors and formatting the code in a way that was a bit easier to follow (I'm certain the code was formatted in such a way as to fit onto 8.5" x 11" sheets of paper).
 

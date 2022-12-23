@@ -19,11 +19,11 @@ The PDF was scanned in as an image and ran through an OCR routine at some point.
 
 It took me about 2 days to get the main bin packing code to a point where it would compile and run identically to that described in the thesis, and an additional day to get the visualizer to build and run.  The bin packing code is somewhat windows-specific (utilizing conio.h and malloc.h, with Microsoft specific functions getch() and kbhit()), and will only compile as-written using Microsoft compatible tools.  Specifically, I used the command line compiler (cl) that is distributed with the Microsoft Visual Studio 2010 to get binpack.c to build. The visual.c code is even more obscure in that I had to find, download, and install an archaic version of Borland Turbo C 2.01 in order to get it to compile. // 花费2天时间 主要 装箱 代码 编译 运行如论文所述 相同地运行，额外1天时间 可视化 建立与运行。装箱 代码是 有点 window 特定，(用到Microsoft 特定的 函数getch() 与 kbhit())
 
-Much to Microsoft and Borland's credit, by the way, is the fact that Turbo C would still run and fully function on Windows 7.
+Much to Microsoft and Borland's credit, by the way, is the fact that Turbo C would still run and fully function on Windows 7. //Turbo C仍能在 Windows 7上运行
 
-There is much that could be done with this code.  There are aspects of it that I find to be clever and original.  My current plan is to [fork it](https://github.com/thebitpusher/boxologic) (I want to leave this repo as it is for posterity), then begin the process of making it more portable and adherent with modern programming practices.  I'd also like to make it more generically applicable - for example to packing packages inside boxes, and have multiple boxes available for choosing, instead of just boxes on a fixed pallet.
+There is much that could be done with this code.  There are aspects of it that I find to be clever and original.  My current plan is to [fork it](https://github.com/thebitpusher/boxologic) (I want to leave this repo as it is for posterity), then begin the process of making it more portable and adherent with modern programming practices.  I'd also like to make it more generically applicable - for example to packing packages inside boxes, and have multiple boxes available for choosing, instead of just boxes on a fixed pallet. //这个code还能做更多，我现在的计划是[fork it](https://github.com/thebitpusher/boxologic) (我想留着这个repo)，让它变得更加便于携带 与 现代编码实践更加贴合，在类别上更加适用 - 例如，packing package inside boxes，有多个打包盒可供选择
 
-Thanks
+Thanks  //致谢
 ------
 
 I am grateful to Mr. Ehran Baltacıoğlu for choosing to tackle a difficult but widely-applicable problem to conduct his master's research on; to the US Air Force, the Air Force Intitute of Technology, the Turkish Air Force, and whatever program was in place that allowed Mr. Baltacıoğlu to carry out his postgraduate degree program with the Air Force Institute of Technology.  This code base has seen more activity than I ever expected, and I'm genuinely pleased to see it enduring.

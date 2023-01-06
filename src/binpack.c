@@ -59,7 +59,7 @@ short int bboxx, bboxy, bboxz, bboxi;
 short int cboxx, cboxy, cboxz, cboxi;
 short int bfx, bfy, bfz;
 short int bbfx, bbfy, bbfz;
-short int xx, yy, zz;
+short int xx, yy, zz;   //pallet相关的尺寸 xx: 长; yy: 宽; zz: 高;
 short int pallet_x, pallet_y, pallet_z;
 
 short int total_boxes;
@@ -88,7 +88,7 @@ double packedvolume;
 double best_solution_volume;
 double total_pallet_volume;
 double total_box_volume;
-double temp;
+double temp;  //系数 取1.0
 double pallet_volume_used_percentage;
 double packed_box_percentage;
 double elapsed_time;
@@ -97,7 +97,7 @@ struct boxinfo {
   char is_packed;
   short int dim1, dim2, dim3, n, cox, coy, coz, packx, packy, packz;
   long int vol;
-} boxlist[5000];
+} boxlist[5000]; //boxlist 箱子📦列表 容量 5000
 
 struct layerlist{
   long int layereval;
@@ -118,7 +118,7 @@ FILE *boxlist_input_file, *report_output_file, *visualizer_file;
 char version[] = "0.01";
 
 //----------------------------------------------------------------------------
-// MAIN PROGRAM
+// MAIN PROGRAM 主程序
 //----------------------------------------------------------------------------
 
 int main(int argc, char *argv[])
@@ -171,20 +171,22 @@ int main(int argc, char *argv[])
 }
 
 //----------------------------------------------------------------------------
-// PERFORMS INITIALIZATIONS
+// PERFORMS INITIALIZATIONS 
 //----------------------------------------------------------------------------
 
 void initialize(void)
 {
   read_boxlist_input();
-  temp = 1.0;
-  total_pallet_volume = temp * xx * yy * zz;
+  temp = 1.0;  //
+  total_pallet_volume = temp * xx * yy * zz;  //pallet 的总体积 = temp 系数 * 长 * 宽 * 高
   total_box_volume = 0.0;
+  
   for (x=1; x <= total_boxes; x++) {
     total_box_volume = total_box_volume + boxlist[x].vol;
   }
 
   scrapfirst = malloc(sizeof(struct scrappad));
+  
   if (scrapfirst == NULL)
   {
     printf("Insufficient memory available\n");
@@ -246,7 +248,7 @@ void read_boxlist_input(void)
 }
 
 //----------------------------------------------------------------------------
-// ITERATIONS ARE DONE AND PARAMETERS OF THE BEST SOLUTION ARE FOUND
+// ITERATIONS ARE DONE AND PARAMETERS OF THE BEST SOLUTION ARE FOUND  //迭代 被运行，找到最优解 的参数
 //----------------------------------------------------------------------------
 
 void execute_iterations(void)
